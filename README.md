@@ -86,9 +86,9 @@ Step 2: Back on the top search box, type: 'virtual machine' and select the 'virt
 
      Leave following categories as defaults: Public inbound ports and Select inbound ports.
 
-     Check-off the licensing box to confirm rights.
+     Check-off the licensing box to confirm rights. Select 'Review + Create' button and then 'Create'.
 
-![image](https://github.com/user-attachments/assets/c54ee64a-bd33-49d9-bc74-887b181b3bef)
+![image](https://github.com/user-attachments/assets/6ff21c14-c728-4104-b050-5e5c72f73c72)
     
 </p>
 
@@ -97,20 +97,26 @@ Step 2: Back on the top search box, type: 'virtual machine' and select the 'virt
 
 <p>
   
-Step 3: Select the 'Windows icon' at the bottom left corner. Select 'Windows Administrative Tools' and on the drop categories, select 'DNS'. The "DNS Manager" window appears. Select the 'DC-1' file, then select the 'Foward Lookup Zones'file, then select the 'mydomain.com' file. 
+Step 3: After you noticed that the 'mycomputerlab' VM was deployed. Return to the Virtual machines category via the search box. You should be able to view a snapshot of your VM details:
 
-![image](https://github.com/user-attachments/assets/c83062af-9dd2-4010-aa12-abd92ec7e611)
+![image](https://github.com/user-attachments/assets/82713fe0-556f-4366-ad1a-ebf4f49f791e)
 
-      To (ping "cherry"), we need to create a DNS A-record on DC-1. Use right-click in the file screen and select ' New Host (A) or (AAA)...' 
+       Highlight and copy the 'Public IP Address' designated for 'mycomputerlab' VM. Open the Windows App (if using a Mac OS). 
+       On the top left courner, select the plus (+) icon. Select 'Add PC'. 
+       Paste the 'Plublic IP Address' for 'mycomputerlab' for the PC Name.
+       Type 'mycomputerlab' for Friendly Name. Select 'Add'.
+       
+![image](https://github.com/user-attachments/assets/87136e90-98d4-49fa-a15e-cd25ab069997)
 
-![Screen Shot 2025-01-09 at 2 13 43 PM](https://github.com/user-attachments/assets/2876e8dc-ff27-43e9-b551-c9b29255cbd3)
+      Double-click on the new 'mycomputerlab' PC. Enter Credential you created for this VM. Select 'Continue'.
+      
+![image](https://github.com/user-attachments/assets/045afd26-8ced-4726-bf96-5612aff87b67)
 
-      Under 'Name', type: cherry. Under 'IP Address' Type: 10.0.0.4 (DC-1’s Private IP address). Select the box 'Create associated pointer (PTR) record'. Click on 'Add Host'.
+      You have successfully logged into your Virtual machine and are now operating in Windows OS. 
+      
+![image](https://github.com/user-attachments/assets/9aadf262-069f-471e-8763-c1c445f1e9dc)
 
-![image](https://github.com/user-attachments/assets/67c7e507-cf2c-4812-b611-dda2f4de4978)
-
-      Observe the 'cherry' record has been added.
-![image](https://github.com/user-attachments/assets/c1e9f91e-ef0c-4784-b8d4-f2fa2d9bbc6f)
+![image](https://github.com/user-attachments/assets/01b85415-8fb2-4b86-a9a8-9876d98ad71c)
 
 
 </p>
