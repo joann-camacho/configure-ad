@@ -4,7 +4,7 @@
 </p>
 
 <h1> Microsoft (Azure) Cloud Virtual Machine Services</h1>
-This tutorial outlines the implementation of creating a virtual machine with a Windows OS within Azure Virtual Machines. Also, successfully implementing a remote desktop login.
+This tutorial guides you through creating a virtual machine with a Windows OS and a Windows Server Datacenter edition in Azure Virtual Machines, along with setting up remote desktop login.
 <br />
 
 
@@ -15,15 +15,18 @@ This tutorial outlines the implementation of creating a virtual machine with a W
   
 <h2>Operating Systems Used </h2>
 
-- Windows 10 (22H2)
+- Windows 10 Pro (22H2)
+- Windows Server Datacenter Edition
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
 ***Pre-req: Log on to your free trial or Pay-per-use subscription account in [Azure Portal](http://portal.azure.com)***
-- Step 1: Create a Resource Group and label it 'Windows-VM'
-- Step 2: Create a Virtual Machine and Configure Settings
-- Step 3: Remote Desktop Log in
 
+- Step 1: Create a Resource Group and label it (Windows-VM)
+- Step 2: Create a Virtual Machine for Windows OS 
+- Step 3: Remote Desktop Log in
+- Step 4: Create a Virtual Machine for Windows Server Datacenter Edition
+- Step 5: Remote Desktop Log in 
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -124,3 +127,51 @@ Step 3: After you noticed that the 'mycomputerlab' VM was deployed. Return to th
 
 <br />
 
+</p>
+<p>
+Step 4: Creating Windows Server Datacenter edition VM. Select 'create' on the virtual machine page. 
+
+  ![image](https://github.com/user-attachments/assets/7d715074-639d-4e07-9b35-9016f8539828)
+
+ ***The following settings in must be the SAME as the previous VM (windows OS): Subscription, Resource Group, and Region*** 
+
+![image](https://github.com/user-attachments/assets/9f6817a8-e944-4df9-9eaa-b8c87b5def2f)
+
+ 
+      Change the following settings: 
+      Virtual machine name: DC-1
+      Image: Windows Server Datacenter Azure Edition (x64) Gen2
+      Create a unique username and password under Administrator Account. Confirm password.
+      
+![image](https://github.com/user-attachments/assets/70472c13-4660-4dd7-9999-e59758ae1df1)
+
+![image](https://github.com/user-attachments/assets/bf9c4a5b-1933-47ac-ab97-9b6e358e19f4)
+
+
+Select 'Next: Disk'. then, Select 'Next: Networking'. On the Networking tab 'create new' Vnet and re-name it. Select 'Ok'.
+
+![image](https://github.com/user-attachments/assets/16df9ef1-2125-4c1d-8022-157e7114ca3d)
+
+Finally, select 'review + create' and then select 'create'. 
+
+<p>
+
+<br />
+
+Step 5: Remote desktop login into DC-1 VM:
+     Copy DC-1's IP address from Azure. Open Windows App (MacOS user) Select the Plus icon on the top left-hand side, and select 'Add PC'. 
+     Paste the DC-1's Ip address under 'PC name'. Type 'DC-1' as the 'Friendly Name'. 
+
+![image](https://github.com/user-attachments/assets/95f40b23-e763-4596-bc40-aeff3c4a0a23)
+
+
+Double-click on the DC-1 profile. Follow the instructions for credential login (username and password). The remote desktop is successful. Verify the system being used is correct. Right-click on the windows icon (bottom left side) and click on 'System'. Inspect the Windows and Device specs is correct. 
+
+![image](https://github.com/user-attachments/assets/02bf80db-4302-4150-b4ff-fd8fcb94259b)
+
+
+ 
+
+    
+
+<br />
